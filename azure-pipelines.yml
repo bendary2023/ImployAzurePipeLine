@@ -9,6 +9,7 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 steps:
+- script: echo "name is $(java -version)"
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
