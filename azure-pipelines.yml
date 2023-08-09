@@ -13,7 +13,7 @@ steps:
 - task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
-    goals: 'clean install'
+    goals: 'mvn clean'
     publishJUnitResults: false
     javaHomeOption: 'JDKVersion'
     mavenVersionOption: 'Default'
