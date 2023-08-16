@@ -1,13 +1,16 @@
+package DriverConfig;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.function.Supplier;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class ChromeConfig extends Config{
 
     public WebDriver getInstance(){
         if(driver==null){
-            driver=new ChromeDriver();
+            ChromeOptions options=new ChromeOptions();
+            options.addArguments("--disable-notifications");
+            driver=new ChromeDriver(options);
         }
         return driver;
     };

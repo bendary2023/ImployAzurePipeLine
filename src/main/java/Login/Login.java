@@ -1,3 +1,8 @@
+package Login;
+
+import DriverConfig.Config;
+import DriverConfig.WaitGeneral;
+import Property.ProperityFiles;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -12,7 +17,7 @@ public class Login {
     WaitGeneral waitGen;
 
     public Login(){
-        driver=Config.getDriver.get();
+        driver= Config.getDriver.get();
         prop=new ProperityFiles();
         propFile=prop.getProperities.apply("src/main/resources/Data.properities");
         waitGen=new WaitGeneral();
@@ -25,6 +30,8 @@ public class Login {
 
     private BiConsumer<String, String> setUserAndPass=(user, pass)->{
         WaitGeneral.waitVisability.accept(By.id("btnContinue"));
+        WaitGeneral.waitClickable.accept(By.id("btnContinue"));
+        WaitGeneral.waitTillHide.accept(By.cssSelector("div[class=\"preloader opacity-0\"]"));
 
         driver.findElement(By.id("btnContinue")).click();
 

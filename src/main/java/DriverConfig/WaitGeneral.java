@@ -1,3 +1,5 @@
+package DriverConfig;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,5 +21,12 @@ public class WaitGeneral {
     public static Consumer<By> waitVisability=(selector)->{
         WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
         wait.until(ExpectedConditions.visibilityOfElementLocated(selector));
+    };
+
+    public static Consumer<By> waitTillHide=(selector)->{
+        waitVisability.accept(selector);
+        while (driver.findElement(selector).isDisplayed()){
+
+        }
     };
 }
