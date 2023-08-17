@@ -1,0 +1,1 @@
+{"uuid":"0ab571b1-a2a8-4ff6-8c65-f9c78d52606f","name":"ImployAzurePipeLine","children":["e7e2b263-2561-45fa-ab1b-389b58b2a671"],"befores":[{"name":"beforeTest","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1692261126149,"stop":1692261127932}],"afters":[],"start":1692261126131,"stop":1692261136696}
