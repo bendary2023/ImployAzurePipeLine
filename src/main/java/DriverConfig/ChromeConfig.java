@@ -10,6 +10,10 @@ public class ChromeConfig extends Config{
         if(driver==null){
             ChromeOptions options=new ChromeOptions();
             options.addArguments("--disable-notifications");
+            options.addArguments("--headless");
+            //options.addArguments("--disable-gpu");
+            options.addArguments("--window-size=1280,800");
+            //options.addArguments("--allow-insecure-localhost");
             driver=new ChromeDriver(options);
         }
         return driver;
