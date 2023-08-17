@@ -22,7 +22,7 @@ public class TestPipeline {
         Login l=new Login();
         l.login.run();
         String userName=driver.findElement(By.cssSelector("a[href='/Profile/CompletedProfile']")).getText();
-        Assert.assertEquals(userName, "Salah Hadi");
-        //Assert.assertTrue(false);
+        //Assert.assertEquals(userName, "Salah Hadi");
+        Assert.assertTrue(false);
     }
 }
