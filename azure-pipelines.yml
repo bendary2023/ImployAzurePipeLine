@@ -21,9 +21,8 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: false
 
-- task: AllureGenerate@1
+- task: PublishAllureReport@1
   inputs:
-    resultsDir: 'allure-results'
-    targetDir: 'allure-report/$(Build.BuildNumber)'
+    reportDir: 'Allure-Report/'
 
 
